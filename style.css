@@ -1,0 +1,114 @@
+*, ::after, ::before{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --DarkBlue: rgb(76, 78, 97);
+    --Grayish: hsl(229, 6%, 66%);
+    --LightGray: hsl(0, 0%, 98%);
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color:var(--LightGray);
+    padding-top: 85px;
+    min-height: 100vh;
+}
+main{
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+.master h1{
+    color: var(--DarkBlue);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 200;
+
+}
+.master span{
+    color: var(--DarkBlue);
+    display: block;
+    font-weight: 600;
+}
+.master p{
+ max-width: calc(1440px/2);
+ margin-right: auto;
+ margin-left: auto;
+ color:var(--Grayish);
+}
+
+article:nth-child(1){
+    transform: translateY(50%);
+}
+article:nth-child(3){
+    transform: translateY(50%);
+    border-top-color: var(--Blue);
+}
+article:nth-child(4){
+    border-top-color: var(--Orange);
+}
+article:nth-child(2){
+    border-top-color: var(--Red);
+}
+
+article{
+    width: 25%;
+    height: 300px;
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    text-align: left;
+    padding: 15px;
+    color:var(--Grayish);
+    padding-right: 30px;
+    border-top: 5px solid var(--Cyan);
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px rgba(76, 78, 97, .4);
+    margin: 15px;
+}
+article h2{
+    color: var(--DarkBlue);
+    margin-bottom: 5px;
+}
+article img{
+    position: absolute;
+    bottom: 15px;
+    right: 12px;
+}
+
+@media screen and (max-width: 750px){
+    body{
+        padding-right: 30px;
+    }
+    article:nth-child(1){
+        transform: translateY(0%);
+    }
+    article:nth-child(3){
+        transform: translateY(0%);
+    }
+    article{
+        display: block;
+        width: 100%;
+    }
+    .master-body{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 540px){
+    .master-body{
+        display: flex;
+        flex-direction: column;
+    }
+    .calculator{
+        order: 1;
+    }
+}
